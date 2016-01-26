@@ -1,0 +1,121 @@
+/*
+
+style.css
+
+---------
+
+Par   : Marc Frutos
+objet : Modélisation d'un CV
+
+*/
+
+@font-face{ 
+	font-family: 'MyWebFont';
+	src: url('fonts/web fonts/actionman_regular_macroman/Action_Man-webfont.eot');
+	src: url('fonts/web fonts/actionman_regular_macroman/Action_Man-webfont.eot?iefix') format('eot'),
+	     url('fonts/web fonts/actionman_regular_macroman/Action_Man-webfont.woff') format('woff'),
+	     url('fonts/web fonts/actionman_regular_macroman/Action_Man-webfont.ttf') format('truetype'),
+	     url('fonts/web fonts/actionman_regular_macroman/Action_Man-webfont.svg#webfont') format('svg');
+}
+@font-face {
+    font-family: 'learning_curve_proregular';
+    src: url('fonts/learningcurve/LearningCurve_OT-webfont.eot');
+    src: url('fonts/learningcurve/LearningCurve_OT-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/learningcurve/LearningCurve_OT-webfont.woff') format('woff'),
+         url('fonts/learningcurve/LearningCurve_OT-webfont.ttf') format('truetype'),
+         url('fonts/learningcurve/LearningCurve_OT-webfont.svg#learning_curve_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+    background-image: url("Images/fonds_gris_windows.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-width: 50%; 
+    background-color: #666;
+}
+
+
+
+/******* Gestion de l'entête *******/
+
+h1
+{
+    color: #062C57;
+    opacity: 0.6;
+    font-size: 3.0em; /* Les titres H1 de 3.0 em */
+    font-family: 'MyWebFont', Arial, serif;/* Utilisation de la police qu'on vient de définir sur les titres */
+    font-style: italic;
+    background-image: url("Images/fond-titre.png") ;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+
+h1, h2, #Citation
+{
+    text-align: center; /* Centre le titre principale le message me représentant et la citation */
+}
+
+
+/* affichage particulier pour la citation */
+#Citation em
+{
+    
+    font-family: 'learning_curve_proregular', Arial, serif;/* Utilisation de la police qu'on vient de définir sur les titres */
+}
+
+h2
+ {
+    font-size: 2.0em;
+ }
+
+
+
+#presentation
+{
+    float: right;
+}
+
+#PhotoPresentation
+{
+    border: 2px solid;
+    box-shadow: 6px 1px 6px black;
+    margin: 10px;
+}
+
+#Citation
+{
+    clear:both;
+}
+
+#Ancre
+{
+    font-size: 2.0em;
+}
+
+#Ancre a
+{
+    text-decoration: none;
+    font-style: italic;     
+}
+
+#Ancre li
+{
+    display:inline;
+} 
+/* fin de l'entête */
+
+h3
+{
+    margin:20px;
+    padding-left: 30px;
+    color: #062C57;
+    font-size: 2.5em; /* Les titres H1 de 1.5 em */
+    text-shadow: 2px 2px 4px #000;
+    background-image: url("Images/fond-titre-long.png");
+    background-position: left;
+    background-repeat: no-repeat;
+}
