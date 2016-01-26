@@ -2,6 +2,8 @@
 
 Ce CV sera créé sur plusieurs étapes permettant de visualiser les modifications par étape :
 
-- La création d'une structure simble du HTML
+- La création d'une structure simple en HTML
+
+- Ajout d'une petite photo
 
 
