@@ -9,6 +9,7 @@ objet : Modélisation d'un CV
 
 */
 
+/* Font ajouter pour le CV */
 @font-face{ 
 	font-family: 'MyWebFont';
 	src: url('fonts/web fonts/actionman_regular_macroman/Action_Man-webfont.eot');
@@ -28,12 +29,14 @@ objet : Modélisation d'un CV
     font-style: normal;
 }
 
+
+/******* formatage général ********/
+
 body
 {
     background-image: url("Images/fonds_gris_windows.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
-    min-width: 50%; 
     background-color: #666;
 }
 
@@ -41,81 +44,105 @@ body
 
 /******* Gestion de l'entête *******/
 
-h1
+header
+{
+    text-align: center; /* Centre le titre principale le message me représentant et la citation */
+    margin-left: 185px;
+    min-width: 250px;
+}
+
+header h1
 {
     color: #062C57;
     opacity: 0.6;
     font-size: 3.0em; /* Les titres H1 de 3.0 em */
     font-family: 'MyWebFont', Arial, serif;/* Utilisation de la police qu'on vient de définir sur les titres */
     font-style: italic;
-    background-image: url("Images/fond-titre.png") ;
-    background-repeat: no-repeat;
-    background-position: center; 
+    background-image:linear-gradient(to right,#fff,rgb(157,156,191)) ;
+    border-radius: 2em 1em 4em 3em;
 }
 
-
-h1, h2, #Citation
-{
-    text-align: center; /* Centre le titre principale le message me représentant et la citation */
-}
-
-
-/* affichage particulier pour la citation */
-#Citation em
-{
-    
-    font-family: 'learning_curve_proregular', Arial, serif;/* Utilisation de la police qu'on vient de définir sur les titres */
-}
-
-h2
+header h2
  {
     font-size: 2.0em;
  }
 
 
-
-#presentation
-{
-    float: right;
+/* affichage particulier pour la citation */
+#Citation em
+{  
+    font-size: 2.5em;
+    font-style: italic;
+    font-family: 'learning_curve_proregular', Arial, serif; /* Utilisation de la police qu'on vient de définir sur les titres */ 
 }
+
+
+
+
+
+/* formatage du liseret à gauche */
+
+#Liseret
+{
+    position: fixed;
+    width: 180px;
+    height: 800px;
+    background-color: #CCC;
+    border-radius: 2em 1em 2em 1em;
+}
+
 
 #PhotoPresentation
 {
     border: 2px solid;
     box-shadow: 6px 1px 6px black;
     margin: 10px;
+    min-width: 100px; 
+    border-radius: 2em 1em 2em 1em;
 }
 
-#Citation
+
+/******* fin de l'entête ********/
+
+
+/*************** Corps *************/
+
+/* mise en place d'un semblant de responsive avec le display flex en wrap */
+#Corps
 {
-    clear:both;
+    margin-left: 185px;
+    justify-content:space-between;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px
 }
 
-#Ancre
-{
-    font-size: 2.0em;
-}
-
-#Ancre a
-{
-    text-decoration: none;
-    font-style: italic;     
-}
-
-#Ancre li
-{
-    display:inline;
-} 
-/* fin de l'entête */
-
+/* Mise en place des rubriques du CV avec une image et un fond associé en gradient pour un soulignement */
 h3
 {
-    margin:20px;
     padding-left: 30px;
+    padding-bottom: 10px ;
     color: #062C57;
-    font-size: 2.5em; /* Les titres H1 de 1.5 em */
+    width: 300px;
+    font-size: 2.5em; /* Les titres H1 de 2.5 em */
     text-shadow: 2px 2px 4px #000;
-    background-image: url("Images/fond-titre-long.png");
-    background-position: left;
-    background-repeat: no-repeat;
+    background: url("Images/ico-titre.png") no-repeat left top, linear-gradient(to right,#fff,rgb(157,156,191)) no-repeat 25px 40px/100% 10px;
+    border-radius: 2em 1em 4em 3em;
 }
+
+/* répartition des différentes rubriques du CV de manière égalitaire */
+#Experience
+{
+    flex: 0.33;
+}
+
+#Competence
+{
+    flex: 0.33;
+}
+
+#Formation
+{
+    flex: 0.33;
+}
+
